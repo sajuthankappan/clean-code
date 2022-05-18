@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Code</title>
+  <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">
+  <link rel="stylesheet" href="/node_modules/reveal.js/plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <script type="module" src="/main.js"></script>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Clean Code</h2>
+      </section>
+      <section>
+        <h3>Topics</h3>
+        <ul>
+          <li>Why Clean Code</li>
+          <li>What is Clean Code</li>
+          <li>Identity Good Code And Bad Code</li>
+          <li>How to Write Good Code</li>
+          <li>Transform Bad Code Into Good Code</li>
+        </ul>
+        <p>
+        <blockquote>Technology Agnostic</blockquote>
+        </p>
+      </section>
+      <section>
+        <h3>Why Clean Code</h3>
+        <div class="fragment">
+          <blockquote>
+            Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you
+            live.
+          </blockquote>
+          - John Woods
+        </div>
+      </section>
+      <section>
+        <h3>Why is it hard to write clean code</h3>
+        <p>Who is responsible?</p>
+      </section>
+      <section>
+        <h3>What is Good Code?</h3>
+      </section>
+      <section>
+        <section>
+          <h2>5S Principles</h2>
+          <img width="400" height="300"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/5S_methodology.png/290px-5S_methodology.png" />
+          <a
+            href="https://en.wikipedia.org/wiki/5S_%28methodology%29">https://en.wikipedia.org/wiki/5S_%28methodology%29</a>
+        </section>
+        <section>
+          <h3>Seiri - Sort</h3>
+          <p>Seiri is sorting through all items in a location and removing all unnecessary items from the location.</p>
+          <img class="fragment" width="400" height="400"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Red_Tag_Area_0123.jpg/220px-Red_Tag_Area_0123.jpg" />
+        </section>
+        <section>
+          <h3>Seiso - Shine</h3>
+          <p>Seiso is sweeping or cleaning and inspecting the workplace, tools and machinery on a regular basis.</p>
+          <img class="fragment" width="400" height="400"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/5S_r%C4%99czny_w%C3%B3zek_paletowy.jpg/220px-5S_r%C4%99czny_w%C3%B3zek_paletowy.jpg" />
+        </section>
+        <section>
+          <h3>Seiketsu - Standardize</h3>
+          <p>Seiketsu is to standardize the processes used to sort, order and clean the workplace.</p>
+        </section>
+        <section>
+          <h3>Shitsuke - Sustain</h3>
+          <p>Shitsuke or sustain is the developed processes by self-discipline of the workers. Also translates as "do
+            without being told".</p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Meaningful Names</h2>
+        </section>
+        <section>
+          <h3>Use Intention Revealing Names</h3>
+          <pre>
+              <code class="javascript" data-trim data-line-numbers style="font-size: 16px">
+                function getResults() {
+                  // TODO
+                }
+              </code>
+            </pre>
+        </section>
+        <section>
+          <h3>Avoid Disinformation</h3>
+          <ul>
+            <li>Abbreviations</li>
+            <li>Inconsistent Spelling</li>
+            <li>Variable Names Like l and o</li>
+            <li>Misleading Terms</li>
+          </ul>
+
+          <pre>
+            <code class="javascript" data-trim data-line-numbers style="font-size: 16px">
+              function getResults2() {
+                // TODO
+              }
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Make Meaningful Distinctions</h3>
+          <H4>Some Names!</H4>
+          <ul>
+            <ul>
+              <li>MyProfile</li>
+              <li>MyAccount</li>
+              <li>EditProfile</li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h3>Use Searchable Names</h3>
+          <pre>
+              <code class="javascript" data-trim data-line-numbers style="font-size: 16px">
+                function getEsResults() {
+                  const ES_URL = process.env.ES_URL;
+                  //
+                }
+              </code>
+            </pre>
+        </section>
+        <section>
+          <h3>Avoid Encodings</h3>
+          <ul>
+            <li>Hungarian Notation</li>
+            <li>Member Prefixes</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Avoid Mental Mapping</h3>
+        </section>
+        <section>
+          <h3>Class/Component Names</h3>
+          <p>Noun or Noun Phrase</p>
+          <p>Should not be a verb</p>
+        </section>
+        <section>
+          <h3>Method / Function Names</h3>
+          <ul>
+            <li>Verb or Verb Phrase</li>
+            <li>Should not be a noun</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Functions</h3>
+        </section>
+        <section>
+          <h3>Small!</h3>
+        </section>
+        <section>
+          <h3>Do One Thing!</h3>
+        </section>
+        <section>
+          <h3>Use Descriptive Names</h3>
+          <pre>
+              <code class="javascript" data-trim data-line-numbers style="font-size: 16px">
+                function esFunction() {
+                  const ES_URL = process.env.ES_URL;
+                  //
+                }
+              </code>
+            </pre>
+        </section>
+        <section>
+          <h3>Function Arguments</h3>
+          <ul>
+            <li>Number of Arguments</li>
+            <li>Flag Arguments</li>
+            <li>Argument Objects</li>
+            <li>Output Arguments</li>
+            <li>No Side Effects</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Command Query Separation</h3>
+        </section>
+        <section>
+          <h3>Prefer Exceptions Over Error Codes / Booleans</h3>
+        </section>
+        <section>
+          <h3>DRY - Do Not Repeat Yourself</h3>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Comments</h3>
+        </section>
+        <section>
+          <h3>Comments Do Not Make Up For Bad Code</h3>
+        </section>
+        <section>
+          <h3>Explain Yourself In Code</h3>
+        </section>
+        <section>
+          <h3>Good Comments</h3>
+          <ul>
+            <li>Legal Comments</li>
+            <li>Explanation of Intent</li>
+            <li>Clarification</li>
+            <li>Warning of Consequences</li>
+            <li>TODO Comments</li>
+            <li>Amplification</li>
+            <li>Documentation Comments</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Bad Comments</h3>
+          <ul>
+            <li>Mumbling</li>
+            <li>Reduntant Comments</li>
+            <li>Misleading Comments</li>
+            <li>Noisy Comments</li>
+            <li>Comments instead of not naming functions properly</li>
+            <li>Position Markers</li>
+            <li>Closing Brace Comments</li>
+            <li>Commented Out Code</li>
+            <li>Too Much Comments</li>
+            <li>Documentation comments in non-public code</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Formatting</h3>
+          <ul>
+            <li>Vertical Formatting</li>
+            <li>Dependent Functions</li>
+            <li>Vertical Ordering</li>
+            <li>Horizontal Formatting</li>
+            <li>Indentation - Keep It Shorter</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Exception Handling</h3>
+          <ul>
+            <li>Use Exception Rather Than Return Codes / Booleans</li>
+            <li>Don't Return Null</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <h3>Unit Testing</h3>
+        <ul>
+          <li>TDD</li>
+          <li>Clean Tests</li>
+        </ul>
+      </section>
+      <section>
+        <section>
+          <h3>Classes</h3>
+          <ul>
+            <li>Small</li>
+            <li>Single Responsibility</li>
+            <li>Cohesion</li>
+            <li>Open-Close Principle</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <h3>References &amp; Credits</h3>
+        <ul>
+          <li><a
+              href="https://en.wikipedia.org/wiki/5S_%28methodology%29">https://en.wikipedia.org/wiki/5S_%28methodology%29</a>
+          </li>
+          <li><a
+              href="https://www.sixsigmadaily.com/5s-sort-set-shine-standardize-sustain/">https://www.sixsigmadaily.com/5s-sort-set-shine-standardize-sustain/</a>
+          </li>
+          <li><a
+              href="https://www.amazon.in/Clean-Code-Handbook-Software-Craftsmanship-ebook/dp/B001GSTOAM">https://www.amazon.in/Clean-Code-Handbook-Software-Craftsmanship-ebook/dp/B001GSTOAM</a>
+          </li>
+          <img width="250" height="400" src="https://m.media-amazon.com/images/I/41SH-SvWPxL.jpg" />
+        </ul>
+      </section>
+      <section>
+        <h2>Thank You!</h2>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
